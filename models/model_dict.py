@@ -8,7 +8,7 @@ def get_model(modelname="SAM", ckpt=None, opt=None):
     elif modelname == "SAMUS":
         model = samus_model_registry['vit_b'](1024, checkpoint=ckpt)
     elif modelname == "AutoSAMUS":
-        model = autosamus_model_registry['vit_b'](args=args, checkpoint=opt.load_path)
+        model = autosamus_model_registry['vit_b'](1024, checkpoint=opt.load_path)
     else:
         raise RuntimeError("Could not find the model:", modelname)
     return model
