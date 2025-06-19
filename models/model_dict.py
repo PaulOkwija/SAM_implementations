@@ -6,7 +6,7 @@ def get_model(modelname="SAM", ckpt=None, opt=None):
     if modelname == "SAM":
         model = sam_model_registry['vit_b'](checkpoint=ckpt)
     elif modelname == "SAMUS":
-        model = samus_model_registry['vit_b'](ckpt=args, checkpoint=ckpt)
+        model = samus_model_registry['vit_b'](1024, checkpoint=ckpt)
     elif modelname == "AutoSAMUS":
         model = autosamus_model_registry['vit_b'](args=args, checkpoint=opt.load_path)
     else:

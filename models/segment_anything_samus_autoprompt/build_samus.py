@@ -12,9 +12,9 @@ from .modeling import ImageEncoderViT, MaskDecoder, PromptEncoder, Samus, TwoWay
 from torch.nn import functional as F
 
 
-def build_samus_vit_h(args, checkpoint=None):
+def build_samus_vit_h(img_size, checkpoint=None):
     return _build_samus(
-        args,
+        img_size,
         encoder_embed_dim=1280,
         encoder_depth=32,
         encoder_num_heads=16,
@@ -26,9 +26,9 @@ def build_samus_vit_h(args, checkpoint=None):
 build_samus = build_samus_vit_h
 
 
-def build_samus_vit_l(args, checkpoint=None):
+def build_samus_vit_l(img_size, checkpoint=None):
     return _build_samus(
-        args,
+        img_size,
         encoder_embed_dim=1024,
         encoder_depth=24,
         encoder_num_heads=16,
@@ -37,9 +37,9 @@ def build_samus_vit_l(args, checkpoint=None):
     )
 
 
-def build_samus_vit_b(args, checkpoint=None):
+def build_samus_vit_b(img_size, checkpoint=None):
     return _build_samus(
-        args,
+        img_size,
         encoder_embed_dim=768,
         encoder_depth=12,
         encoder_num_heads=12,
@@ -57,7 +57,7 @@ autosamus_model_registry = {
 
 
 def _build_samus(
-    args,
+    img_size,
     encoder_embed_dim,
     encoder_depth,
     encoder_num_heads,
@@ -65,7 +65,8 @@ def _build_samus(
     checkpoint=None,
 ):
     prompt_embed_dim = 256
-    image_size = args.encoder_input_size
+    # image_size = args.encoder_input_size
+    image_size = img_size
     patch_size = image_size//32
     image_embedding_size = image_size // patch_size
     samus = Samus(
