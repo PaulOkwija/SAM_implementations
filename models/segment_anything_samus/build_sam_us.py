@@ -40,7 +40,7 @@ def build_samus_vit_l(img_size, checkpoint=None):
 def build_samus_vit_b(img_size, checkpoint=None):
     return _build_samus(
         img_size,
-        encoder_embed_dim=512,
+        encoder_embed_dim=768,
         encoder_depth=12,
         encoder_num_heads=12,
         encoder_global_attn_indexes=[2, 5, 8, 11],
