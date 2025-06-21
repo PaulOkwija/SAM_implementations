@@ -1,5 +1,5 @@
-from . import build_samed, SamPredictor
-from . import sam_model_registry
+from . import build_samed, predictor
+from .build_samed import sam_model_registry
 
 import math
 import torch
@@ -11,7 +11,7 @@ from modeling import Sam
 from safetensors import safe_open
 from safetensors.torch import save_file
 
-from icecream import ic
+# from icecream import ic
 
 
 class _LoRA_qkv(nn.Module):

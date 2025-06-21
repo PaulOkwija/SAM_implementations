@@ -11,7 +11,7 @@ def get_model(modelname="SAM", input_size=256, ckpt=None, opt=None, lora_cpt=Non
     elif modelname == "SAMUS":
         model = samus_model_registry['vit_b'](input_size, checkpoint=ckpt)
     elif modelname == "SAMed":
-        model = samus_model_registry['vit_h'](input_size, num_classes=8, 
+        model = sam_model_registry['vit_h'](input_size, num_classes=8, 
                                               checkpoint=ckpt, pixel_mean=[0, 0, 0],
                                               pixel_std=[1, 1, 1])
         model = lora.LoRA_Sam(model, 4).cuda()
