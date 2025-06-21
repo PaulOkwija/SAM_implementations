@@ -1,5 +1,5 @@
-from segment_anything import build_sam, SamPredictor
-from segment_anything import sam_model_registry
+from . import build_samed, SamPredictor
+from . import sam_model_registry
 
 import math
 import torch
@@ -7,7 +7,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch import Tensor
 from torch.nn.parameter import Parameter
-from segment_anything.modeling import Sam
+from modeling import Sam
 from safetensors import safe_open
 from safetensors.torch import save_file
 

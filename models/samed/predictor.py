@@ -7,7 +7,7 @@
 import numpy as np
 import torch
 
-from segment_anything.modeling import Sam
+from .modeling import sam
 
 from typing import Optional, Tuple
 
@@ -17,7 +17,7 @@ from .utils.transforms import ResizeLongestSide
 class SamPredictor:
     def __init__(
         self,
-        sam_model: Sam,
+        sam_model: sam,
     ) -> None:
         """
         Uses SAM to calculate the image embedding for an image, and then
