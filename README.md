@@ -5,11 +5,12 @@ This repository benchmarks and compares the performance of several Segment Anyth
 
 ## Included SAM Implementations
 
-| Model/Implementation         | Description                                      | Original Repository Link | Performance (to be filled) |
-|-----------------------------|--------------------------------------------------|-------------------------|----------------------------|
-| Segment Anything (SAM)      | Original Meta AI SAM implementation              | [facebookresearch/segment-anything](https://github.com/facebookresearch/segment-anything) |                            |
-| SAMed                       | Customized Segment Anything Model for Medical Image Segmentation | [hitachinsk/SAMed](https://github.com/hitachinsk/SAMed) |                      |
-| SAMUS                       | SAM adapted for ultrasound segmentation (SAMUS)  | [xianlin7/SAMUS](https://github.com/xianlin7/SAMUS) |                                                    
+| Model/Implementation        | Description                                      | Original Repository Link | Implementation status | Performance (to be filled) |
+|-----------------------------|--------------------------------------------------|-------------------------|----------------------------|----------------------------|
+| Segment Anything (SAM)      | Original Meta AI SAM implementation              | [facebookresearch/segment-anything](https://github.com/facebookresearch/segment-anything) |              Success              |                            |
+| Segment Anything 2 (SAM2)      | Original Meta AI SAM2 implementation              | [facebookresearch/sam2](https://github.com/facebookresearch/sam2) |             Pending               |                            |
+| SAMed                       | Customized Segment Anything Model for Medical Image Segmentation | [hitachinsk/SAMed](https://github.com/hitachinsk/SAMed) |           Failed           |                      |
+| SAMUS                       | SAM adapted for ultrasound segmentation (SAMUS)  | [xianlin7/SAMUS](https://github.com/xianlin7/SAMUS) |         Success             |                      |                                                    
 
 > **Note:** Performance metrics for each model will be added after benchmarking.
 
@@ -21,6 +22,14 @@ This repository benchmarks and compares the performance of several Segment Anyth
 
 ## References
 
-- [Segment Anything (Meta AI)](https://github.com/facebookresearch/segment-anything)
-- [SAMed](https://github.com/xianlin7/SAMed)
-- [SAMUS](https://github.com/xianlin7/SAMUS)
+- [Segment Anything (Meta AI)](https://ai.meta.com/research/publications/segment-anything/)
+- [SAMed](https://arxiv.org/pdf/2304.13785)
+- [SAMUS](https://arxiv.org/pdf/2309.06824)
+- [SAM2](https://ai.meta.com/research/publications/sam-2-segment-anything-in-images-and-videos/)
+
+## Yet into look into
+-[MedSAM](https://github.com/bowang-lab/MedSAM/tree/main)
+    -[Paper](https://www.nature.com/articles/s41467-024-44824-z)
+    -[Updated-work](https://medsam2.github.io/)
+-[SAM-Med2D](https://arxiv.org/pdf/2308.16184)
+
