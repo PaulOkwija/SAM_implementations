@@ -31,5 +31,10 @@ This repository benchmarks and compares the performance of several Segment Anyth
 -[MedSAM](https://github.com/bowang-lab/MedSAM/tree/main)
     -[Paper](https://www.nature.com/articles/s41467-024-44824-z)
     -[Updated-work](https://medsam2.github.io/)
--[SAM-Med2D](https://arxiv.org/pdf/2308.16184)
+-[*SAM-Med2D*](https://arxiv.org/pdf/2308.16184)
 
+### Why box prompts
+-[SAM](https://arxiv.org/pdf/2305.00035)
+
+### Why merge boxes
+-[SAM-U](https://arxiv.org/pdf/2307.04973)
