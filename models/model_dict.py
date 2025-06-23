@@ -7,7 +7,7 @@ import models.samed.sam_lora_image_encoder as lora
 
 def get_model(modelname="SAM", input_size=256, ckpt=None, opt=None, lora_cpt=None):
     if modelname == "SAM":
-        model = sam_model_registry['vit_b'](checkpoint=ckpt)
+        model = sam_model_registry['vit_h'](checkpoint=ckpt)
     elif modelname == "SAMUS":
         model = samus_model_registry['vit_b'](input_size, checkpoint=ckpt)
     elif modelname == "SAMed":
