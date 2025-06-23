@@ -7,7 +7,7 @@ from models.segment_anything_samus_autoprompt.build_samus import autosamus_model
 
 def get_model(modelname="SAM", input_size=256, ckpt=None, opt=None, lora_cpt=None):
     if modelname == "SAM":
-        model = sam_model_registry['vit_h'](checkpoint=ckpt)
+        model = sam_model_registry['vit_b'](checkpoint=ckpt)
     elif modelname == "SAMUS":
         model = samus_model_registry['vit_b'](input_size, checkpoint=ckpt)
     # elif modelname == "SAMed":
